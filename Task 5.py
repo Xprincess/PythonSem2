@@ -6,21 +6,21 @@ import random
 def input_num():
     while True:
         try:
-            n = int(input("Введите длину списка: "))
+            n = int(input("Insert the length of the list: "))
             return n
         except:
-            print("Неправильный ввод, попробуйте снова")
+            print("Wrong. Try again")
 
 
 def create_random_lst(size):
     lst = []
     while True:
         try:
-            iMin = int(input("Введите минимальное рандомное число: "))
-            iMax = int(input("Введите максимальное рандомное число: "))
+            iMin = int(input("Insert min number: "))
+            iMax = int(input("Insert max number: "))
             break
         except:
-            print("Неправильный ввод, попробуйте снова")
+            print("Wrong. Try again")
 
     for i in range(size):
         lst.append(random.randint(iMin, iMax))
@@ -35,6 +35,6 @@ def shuffle_lst(lst):
 
 
 my_list = create_random_lst(input_num())
-print(f'Рандомный список выглядит так: {my_list}')
+print(f'Random list: {my_list}')
 
-print(f'Перемешанный список выглядит так: {shuffle_lst(my_list)}')
+print(f'Mixed list: {shuffle_lst(my_list)}')
